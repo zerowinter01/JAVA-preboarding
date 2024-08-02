@@ -1,0 +1,72 @@
+[
+    {
+        "userId": "user01",
+        "password": "pass01",
+        "nickName": "닉네임01",
+        "username": "홍길동",
+        "phonenumber": "010-1111-1111"
+    },
+    {
+        "userId": "user02",
+        "password": "pass02",
+        "nickName": "닉네임02",
+        "username": "김철수",
+        "phonenumber": "010-2222-2222"
+    },
+    {
+        "userId": "user03",
+        "password": "pass03",
+        "nickName": "닉네임03",
+        "username": "이영희",
+        "phonenumber": "010-3333-3333"
+    },
+    {
+        "userId": "user04",
+        "password": "pass04",
+        "nickName": "닉네임04",
+        "username": "박민수",
+        "phonenumber": "010-4444-4444"
+    },
+    {
+        "userId": "user05",
+        "password": "pass05",
+        "nickName": "닉네임05",
+        "username": "최지훈",
+        "phonenumber": "010-5555-5555"
+    },
+    {
+        "userId": "user06",
+        "password": "pass06",
+        "nickName": "닉네임06",
+        "username": "정하늘",
+        "phonenumber": "010-6666-6666"
+    },
+    {
+        "userId": "user07",
+        "password": "pass07",
+        "nickName": "닉네임07",
+        "username": "임수정",
+        "phonenumber": "010-7777-7777"
+    },
+    {
+        "userId": "user08",
+        "password": "pass08",
+        "nickName": "닉네임08",
+        "username": "하승우",
+        "phonenumber": "010-8888-8888"
+    },
+    {
+        "userId": "user09",
+        "password": "pass09",
+        "nickName": "닉네임09",
+        "username": "배진수",
+        "phonenumber": "010-9999-9999"
+    },
+    {
+        "userId": "user10",
+        "password": "pass10",
+        "nickName": "닉네임10",
+        "username": "강수현",
+        "phonenumber": "010-0000-0000"
+    }
+]
