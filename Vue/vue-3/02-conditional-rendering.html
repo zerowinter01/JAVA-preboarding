@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <template v-if="name === 'Bot'">
+        <div> 로봇입니다. </div>
+        <div> AI 기능이 있습니다. </div>
+      </template>
+    </div>
+    <script>
+      const { createApp, ref } = Vue;
+
+      const app = createApp({
+        setup() {
+          const isSeen = ref(true)
+          const name = ref('Bot')
+          return { 
+            isSeen , name
+          };
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>

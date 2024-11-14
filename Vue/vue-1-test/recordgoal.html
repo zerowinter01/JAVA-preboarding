@@ -1,0 +1,34 @@
+<template>
+  <div>
+    <h2>운동 목표 기록하기</h2>
+    <input v-model="goalDescription" placeholder="목표 설명 입력" />
+    <input type="date" v-model="achievementDate" />
+    <button @click="saveGoal">기록 저장</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      goalDescription: "",
+      achievementDate: "",
+    };
+  },
+  methods: {
+    saveGoal() {
+      const goal = {
+        goalDescription: this.goalDescription,
+        achievementDate: this.achievementDate,
+      };
+      fetch("http://localhost:8080/api/goals", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(goal),
+      })
+      .then(response => response.json())
+      .then(data => console.log("기록 저장 완료:", data));
+    },
+  },
+};
+</script>

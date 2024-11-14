@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>조건문 연습하기</h1>
+    <button @click = "change">Login/Logout</button>
+    <ul v-if="isLogin">
+      <li>유저네임 : {{ userName }}</li>
+      <li>관리자여부 : {{ isAdmin }}</li>
+      <li>비밀번호 : {{passWord}}</li>
+    </ul>
+ </div> 
+ <script>
+  const { createApp, ref } = Vue;
+
+  const app = createApp({
+    setup(){ 
+      const isLogin = ref(false)
+      const change = function(){
+        console.log("test")
+        isLogin.value = !isLogin.value
+      }
+      const userName = ref('admin')
+      const isAdmin = ref(true)
+      const passWord = ref('1q2w3e4r')
+      return{
+        isLogin, change, userName, isAdmin, passWord
+      }
+    }
+  })
+
+  app.mount("#app")
+</script>
+</body>
+</html>

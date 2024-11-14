@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      .active {
+        color: crimson;
+      }
+
+      .text-primary {
+        color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div :class="{active : isActive}"> 글자색 </div>
+      <!-- <div class = "static" :class="{active : isActive, 'text-primary': hasInfo}"> 글자색</div> -->
+      <div class = "static" :class="classObj">글자색</div>
+      <hr>
+    </div>
+    <script>
+      const { createApp, ref } = Vue;
+
+      const app = createApp({
+        setup() {
+          const isActive = ref(false)
+          const hasInfo = ref(true)
+
+          const classObj = ref({
+            active : isActive,
+            'text-primary': hasInfo
+          })
+          return { isActive, isActive, classObj };
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>

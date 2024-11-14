@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <p>Count : {{count}}</p>
+      <button @click="count++">증가</button>
+      <button @click="count--">감소</button>
+
+      <button @click="myFunction">메서드 동작</button>
+
+      <button @click="greeting('안녕')"> 안녕</button>
+      <button @click="greeting('잘 가')"> 잘 가</button>
+
+      <button @click="warning('보', $event)"> 보</button>
+
+      <hr>
+
+      <a @click.stop.prevent href="https://www.ssafy.com"> ssafy 공식 </a>
+
+    </div>
+    <script>
+      const { createApp, ref } = Vue;
+
+      const app = createApp({
+        setup() {
+          const count = ref(0);
+          const myFunction  = function(){
+            console.log(event)
+          }
+
+          const greeting = function(message){
+            console.log(message)
+          }
+          const warning = function(message, event){
+            console.log(message)
+            console.log(event)
+          }
+          return { count, myFunction, greeting, warning };
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>
